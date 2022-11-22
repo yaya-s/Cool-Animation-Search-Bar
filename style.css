@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500&display=swap');
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+html,body{
+  display: grid;
+  place-items: center;
+  background: #59C1BD;
+  height: 50%;
+}
+::selection{
+  background: #59C1BD;
+  color: #fff;
+}
+.heading {
+  color: #fff;
+  font-size: 70px;
+  word-spacing: 5px;
+}
+.search-box{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+.search-box.active{
+  width: 550px;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active{
+  opacity: 1;
+}
+.search-box input::placeholder{
+  color: #a6a6a6;
+}
+.search-box .search-icon{
+  position: absolute;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  transform: translateY(-50%);
+  height: 60px;
+  right: 0px;
+  top: 50%;
+  background: #fff;
+  border-radius: 50%;
+  width: 60px;
+  color: #59C1BD;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-icon.active{
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #59C1BD;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active{
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data{
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active{
+  display: none;
+}
